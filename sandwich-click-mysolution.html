@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Clicked</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <h1>Click to Eat Sandwich</h1>
+  <h3 id="pbj">Peanut Butter Jelly: <span class="score">0</span></h3>
+  <h3 id="grilledcheese">Grilled Cheese: <span class="score">0</span></h3>
+  <h3 id="roastbeef">Roast Beef: <span class="score">0</span></h3>
+
+  <script type="text/javascript">
+
+    // This document.ready isn't necessary in this example... but is needed in cases where the HTML is complex.
+    // This code makes sure that the JavaScript doesn't get run until the HTML is finished loading
+    // It's useful to become familiar with now.
+
+    $(document).ready(function() {
+
+      // VARIABLES
+      // ====================================================================
+      // Here we create variables for tracking the number of sandwiches eaten
+      // ...
+
+      var pbj = 0;
+      var grilledcheese = 0;
+      var roastbeef = 0;
+
+      // ...
+
+      // FUNCTIONS
+      // ====================================================================
+      // Here we create various on "click" functions which capture the clicks
+      // Inside each click event is the code to create an alert, update the counter, then show the updated count.
+      // ...
+    $("#pbj").on( "click", function(){
+        pbj += 1;
+        //alert("You ate " + pbj + " " + "PBJ sandwiches");
+        $("#pbj .score").html(pbj);
+    });
+
+    $("#grilledcheese").on( "click", function(){
+        grilledcheese += 1;
+        //alert("You ate " + grilledcheese + " " + "Grilled Cheese sandwiches");
+        $("#grilledcheese .score").html(grilledcheese);
+    });
+
+    $("#roastbeef").on( "click", function(){
+        roastbeef += 1;
+        //alert("You ate " + roastbeef + " " + "Roast Beef sandwiches");
+        $("#roastbeef .score").html(roastbeef);
+    });
+
+      // ...
+
+    });
+
+</script>
+
+</body>
+
+</html>
